@@ -30,5 +30,9 @@ const login = async (req, res) =>{
     }
 }
 
+const getData = async (req, res) => {
+    res.send("You just accessed endpoint")
+}
 
-module.exports = { register, login };
+
+module.exports = { register, login, getData };
