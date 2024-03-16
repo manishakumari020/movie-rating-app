@@ -19,7 +19,11 @@ mongoose
 // Define routes
 app.use('/api/users', authRoutes);
 app.use('/api/movies', authMovieRoute);
-app.use("/api/movies/", authReviewRoute)
+app.use("/api/movies/", authReviewRoute);
+
+app.get("/", (req, res) => {
+    res.send("Backend server is running")
+})
 
 // Start server
 const PORT = process.env.PORT || 3000;
